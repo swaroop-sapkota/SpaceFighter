@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Runtime.CompilerServices;
 
-#if ENABLE_INPUT_SYSTEM 
+
+#if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
 #endif
 
@@ -164,11 +166,32 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
+            AimShoot();
+
+           
 
             if (Input.GetKeyDown(KeyCode.E))
             {
                 PickUpItem();
             }
+        }
+        private void AimShoot()
+        {
+            if (_input.aim && Grounded && !_input.sprint)
+            {
+                //Play Aim Animation
+                _animator.SetBool("Aiming",_input.aim);
+                _animator.SetBool("Shooting", _input.shoot);
+
+            }
+            else
+            {
+                //stop aim animation
+                _animator.SetBool("Aiming", false);
+                _animator.SetBool("Shooting",false);
+
+            }
+
         }
 
         private void LateUpdate()
