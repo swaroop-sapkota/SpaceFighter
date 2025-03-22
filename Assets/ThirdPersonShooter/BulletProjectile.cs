@@ -17,22 +17,29 @@ public class BulletProjectile : MonoBehaviour {
     private void Start() {
         float speed = 50f;
         bulletRigidbody.linearVelocity = transform.forward * speed;
-        Destroy(gameObject, 10);
+        //Destroy(gameObject, 10);
     }
 
     private void OnTriggerEnter(Collider other) {
-
         Destroy(transform.GetComponent<Rigidbody>());
-        //Destroy(gameObject);
+        Destroy(gameObject);
 
+        /* if(other.tag == "Dragon")
+        {
+            other.GetComponent<Dragon>().TakeDamage(damageAmount);
+        }
+        */
+        
         if (other.GetComponent<BulletTarget>() != null || other.tag == "Dragon") {
             // Hit target
+            transform.parent = other.transform;
             other.GetComponent<Dragon>().TakeDamage(damageAmount);
             Instantiate(vfxHitGreen, transform.position, Quaternion.identity);
         } else {
             // Hit something else
             Instantiate(vfxHitRed, transform.position, Quaternion.identity);
         }
+        
     }
 
 }
