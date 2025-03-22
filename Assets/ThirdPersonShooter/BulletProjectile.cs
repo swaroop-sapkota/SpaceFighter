@@ -8,6 +8,7 @@ public class BulletProjectile : MonoBehaviour {
     [SerializeField] private Transform vfxHitRed;
 
     private Rigidbody bulletRigidbody;
+    public int damageAmount = 20;
 
     private void Awake() {
         bulletRigidbody = GetComponent<Rigidbody>();
@@ -16,17 +17,22 @@ public class BulletProjectile : MonoBehaviour {
     private void Start() {
         float speed = 50f;
         bulletRigidbody.linearVelocity = transform.forward * speed;
+        Destroy(gameObject, 10);
     }
 
     private void OnTriggerEnter(Collider other) {
-        if (other.GetComponent<BulletTarget>() != null) {
+
+        Destroy(transform.GetComponent<Rigidbody>());
+        //Destroy(gameObject);
+
+        if (other.GetComponent<BulletTarget>() != null || other.tag == "Dragon") {
             // Hit target
+            other.GetComponent<Dragon>().TakeDamage(damageAmount);
             Instantiate(vfxHitGreen, transform.position, Quaternion.identity);
         } else {
             // Hit something else
             Instantiate(vfxHitRed, transform.position, Quaternion.identity);
         }
-        Destroy(gameObject);
     }
 
 }
