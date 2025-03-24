@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Runtime.CompilerServices;
+using UnityEngine.UI;
 
 
 #if ENABLE_INPUT_SYSTEM
@@ -80,6 +81,8 @@ namespace StarterAssets
         [Tooltip("For locking the camera position on all axis")]
         public bool LockCameraPosition = false;
 
+
+        Animator m_Animator;
         // cinemachine
         private float _cinemachineTargetYaw;
         private float _cinemachineTargetPitch;
@@ -117,6 +120,23 @@ namespace StarterAssets
 
         private bool _hasAnimator;
 
+        /*
+        // ADded part
+
+        public float health = 100;
+        public float hunger = 100;
+        public float thirst = 100;
+
+        public float deathRate;
+        public float thirstRate;
+        public float hungerRate;
+
+        public Slider Hbar;
+        public Slider Tbar;
+        public Slider healthBar;
+        // *************************
+
+        */
         private bool IsCurrentDeviceMouse
         {
             get
@@ -174,6 +194,36 @@ namespace StarterAssets
             {
                 PickUpItem();
             }
+
+            /*
+            // ADDED PART ****************************
+            healthBar.value = health;
+            Hbar.value = hunger;
+            Tbar.value = thirst;
+
+            hunger = hunger - (hungerRate * Time.deltaTime);
+            thirst = thirst - (thirstRate * Time.deltaTime);
+
+            if (health <= 0)
+            {
+                health = 0;
+                m_Animator.SetTrigger("dead");
+                //gameObject.GetComponent<ThirdPersonUserControl>().enabled = false;
+            }
+            if (hunger <= 0 || thirst <= 0)
+            {
+                health = health - (deathRate * Time.deltaTime);
+            }
+            if (hunger <= 0)
+            {
+                hunger = 0;
+            }
+            if (thirst <= 0)
+            {
+                thirst = 0;
+            }
+            // **********************************************F**************
+            */
         }
         private void AimShoot()
         {
