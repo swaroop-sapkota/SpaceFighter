@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour {
 
@@ -17,10 +18,12 @@ public class Inventory : MonoBehaviour {
         if (Input.GetKey(KeyCode.Tab))
         {
             invTab.SetActive(true);
+            Cursor.visible = true;
         }
         else
         {
             invTab.SetActive(false);
+            Cursor.visible = false;
         }
 	}
 }
