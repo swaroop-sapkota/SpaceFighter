@@ -93,7 +93,7 @@ MonoBehaviour:
   item: 1
   health: 0
   tValue: 40
-  hValue: 20
+  hValue: 10
   healthValue: 0
 --- !u!114 &4653655192279025043
 MonoBehaviour:

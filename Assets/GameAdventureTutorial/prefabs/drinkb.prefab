@@ -149,5 +149,5 @@ MonoBehaviour:
   item: 1
   health: 0
   tValue: 30
-  hValue: 20
+  hValue: 10
   healthValue: 0

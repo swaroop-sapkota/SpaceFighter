@@ -30,6 +30,8 @@ public class UseInventory : MonoBehaviour
         {
             player.GetComponent<ThirdPersonCharacter>().thirst += tValue;
             player.GetComponent<ThirdPersonCharacter>().hunger += hValue;
+            player.GetComponent<ThirdPersonCharacter>().health += hValue;
+
             Destroy(gameObject);
         }
 
@@ -37,10 +39,6 @@ public class UseInventory : MonoBehaviour
         {
             //use item
         }
-        if (health)
-        {
-            player.GetComponent<ThirdPersonCharacter>().health += hValue;
-
-        }
+        
     }
 }
