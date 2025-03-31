@@ -2,6 +2,8 @@ using NUnit.Framework;
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.AI;
+using UnityEngine.Pool;
+using Unity.VisualScripting;
 
 public class EnemyBehavior : MonoBehaviour
 {
@@ -14,6 +16,13 @@ public class EnemyBehavior : MonoBehaviour
     private int locationIndex = 0;
 
     private NavMeshAgent agent;
+
+
+    //public void SetPool(IObjectPool<Enemy> pool)
+    //{
+    //    enemyPool = pool;
+    //}
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,6 +33,10 @@ public class EnemyBehavior : MonoBehaviour
         MoveToNextPatrolLocation();
     }
 
+    public void Die()
+    {
+        Destroy(gameObject);
+    }
 
     void InitializePatrolRoute()
     {
@@ -53,6 +66,8 @@ public class EnemyBehavior : MonoBehaviour
         {
             agent.destination = Player.position;
             Debug.Log("Enemy Detected!");
+
+            //enemyPool.Release(this);
         }
         // No changes needed
     }
