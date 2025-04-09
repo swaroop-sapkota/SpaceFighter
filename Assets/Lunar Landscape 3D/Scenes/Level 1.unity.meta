@@ -1,14 +1,7 @@
 fileFormatVersion: 2
-guid: f4021bc829b444148a3959ec85eeeceb
+guid: 797c6d624d6707047a6cee9e57a31f2e
 DefaultImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 132614
-  packageName: Lunar Landscape 3D
-  packageVersion: 1.1
-  assetPath: Assets/Lunar Landscape 3D/Scenes/LunarLandscape3D.unity
-  uploadId: 337475
