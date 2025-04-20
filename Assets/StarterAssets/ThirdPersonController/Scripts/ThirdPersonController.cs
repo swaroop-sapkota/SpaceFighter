@@ -107,6 +107,7 @@ namespace StarterAssets
         private int _animIDMotionSpeed;
         private int _animIDPickUp;
 
+
 #if ENABLE_INPUT_SYSTEM 
         private PlayerInput _playerInput;
 #endif
@@ -116,27 +117,11 @@ namespace StarterAssets
         private GameObject _mainCamera;
         private bool _rotateOnMove = true;
 
+
         private const float _threshold = 0.01f;
 
         private bool _hasAnimator;
 
-        /*
-        // ADded part
-
-        public float health = 100;
-        public float hunger = 100;
-        public float thirst = 100;
-
-        public float deathRate;
-        public float thirstRate;
-        public float hungerRate;
-
-        public Slider Hbar;
-        public Slider Tbar;
-        public Slider healthBar;
-        // *************************
-
-        */
         private bool IsCurrentDeviceMouse
         {
             get
@@ -188,43 +173,18 @@ namespace StarterAssets
             Move();
             AimShoot();
 
-           
+
 
             if (Input.GetKeyDown(KeyCode.E))
             {
                 PickUpItem();
             }
 
-            /*
-            // ADDED PART ****************************
-            healthBar.value = health;
-            Hbar.value = hunger;
-            Tbar.value = thirst;
+            
 
-            hunger = hunger - (hungerRate * Time.deltaTime);
-            thirst = thirst - (thirstRate * Time.deltaTime);
-
-            if (health <= 0)
-            {
-                health = 0;
-                m_Animator.SetTrigger("dead");
-                //gameObject.GetComponent<ThirdPersonUserControl>().enabled = false;
-            }
-            if (hunger <= 0 || thirst <= 0)
-            {
-                health = health - (deathRate * Time.deltaTime);
-            }
-            if (hunger <= 0)
-            {
-                hunger = 0;
-            }
-            if (thirst <= 0)
-            {
-                thirst = 0;
-            }
-            // **********************************************F**************
-            */
         }
+
+        
         private void AimShoot()
         {
             if (_input.aim && Grounded && !_input.sprint)
@@ -243,6 +203,7 @@ namespace StarterAssets
             }
 
         }
+        
 
         private void LateUpdate()
         {
@@ -366,75 +327,7 @@ namespace StarterAssets
             }
         }
 
-        /*private void JumpAndGravity()
-        {
-            if (Grounded)
-            {
-                // reset the fall timeout timer
-                _fallTimeoutDelta = FallTimeout;
-
-                // update animator if using character
-                if (_hasAnimator)
-                {
-                    _animator.SetBool(_animIDJump, false);
-                    _animator.SetBool(_animIDFreeFall, false);
-                }
-
-                // stop our velocity dropping infinitely when grounded
-                if (_verticalVelocity < 0.0f)
-                {
-                    _verticalVelocity = -2f;
-                }
-
-                // Jump
-                if (_input.jump && _jumpTimeoutDelta <= 0.0f)
-                {
-                    // the square root of H * -2 * G = how much velocity needed to reach desired height
-                    _verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
-
-                    // update animator if using character
-                    if (_hasAnimator)
-                    {
-                        _animator.SetBool(_animIDJump, true);
-                    }
-                }
-
-                // jump timeout
-                if (_jumpTimeoutDelta >= 0.0f)
-                {
-                    _jumpTimeoutDelta -= Time.deltaTime;
-                }
-            }
-            else
-            {
-                // reset the jump timeout timer
-                _jumpTimeoutDelta = JumpTimeout;
-
-                // fall timeout
-                if (_fallTimeoutDelta >= 0.0f)
-                {
-                    _fallTimeoutDelta -= Time.deltaTime;
-                }
-                else
-                {
-                    // update animator if using character
-                    if (_hasAnimator)
-                    {
-                        _animator.SetBool(_animIDFreeFall, true);
-                    }
-                }
-
-                // if we are not grounded, do not jump
-                _input.jump = false;
-            }
-
-            // apply gravity over time if under terminal (multiply by delta time twice to linearly speed up over time)
-            if (_verticalVelocity < _terminalVelocity)
-            {
-                _verticalVelocity += Gravity * Time.deltaTime;
-            }
-        }
-        */
+       
 
         private void JumpAndGravity()
         {
@@ -467,9 +360,6 @@ namespace StarterAssets
                     {
                         _animator.SetBool(_animIDJump, true);
                     }
-
-                    // Reset jump timeout
-                    _jumpTimeoutDelta = JumpTimeout;
                 }
 
                 // jump timeout
