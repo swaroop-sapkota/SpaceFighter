@@ -7472,7 +7472,7 @@ PrefabInstance:
     - target: {fileID: 2070925441746177913, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_Follow
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1411952749}
     - target: {fileID: 2070925441746177913, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_Lens.FieldOfView
       value: 40
@@ -20078,6 +20078,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1989120395}
   m_SourcePrefab: {fileID: 100100000, guid: 88e480c990c9d6a458b5fc85fe1da2aa, type: 3}
+--- !u!4 &1411952749 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7903269472315199178, guid: b9a65a67b89b19a47b9162a1c9174394, type: 3}
+  m_PrefabInstance: {fileID: 1444981578}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1429788964
 PrefabInstance:
   m_ObjectHideFlags: 0
