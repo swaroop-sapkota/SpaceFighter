@@ -17,6 +17,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		[SerializeField] float m_AnimSpeedMultiplier = 1f;
 		[SerializeField] float m_GroundCheckDistance = 0.1f;
 
+		public GameManagerScript gameManager;
+
 		Rigidbody m_Rigidbody;
 		Animator m_Animator;
 		bool m_IsGrounded;
@@ -41,6 +43,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         public Slider Hbar;
         public Slider Tbar;
         public Slider healthBar;
+
+		private bool isDead;
 
 
 		void Start()
@@ -278,11 +282,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                 m_Animator.SetTrigger("Hurt");
 
                 // Ensure health doesn't go below 0
-                if (health < 0)
+                if (health <= 0 && !isDead)
                 {
-                    health = 0;
-                    m_Animator.SetTrigger("dead");
-                    gameObject.GetComponent<ThirdPersonUserControl>().enabled = false; // Disable control on death
+					isDead = true;
+					gameObject.SetActive(false);
+					gameManager.gameOver();
+					Debug.Log("Dead");
                 }
             }
         }
