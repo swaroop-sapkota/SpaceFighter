@@ -11,15 +11,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Lunar Landscape 3D/Scenes/Main Menu.unity
     guid: c3cf79d54e807e544946e5f2020c3698
-  - enabled: 1
+  - enabled: 0
     path: Assets/Lunar Landscape 3D/Scenes/Level 1.unity
     guid: f4021bc829b444148a3959ec85eeeceb
   - enabled: 1
     path: Assets/Lunar Landscape 3D/Scenes/Level 2.unity
-    guid: 52037e5acb7d6294198c9087e6578828
+    guid: 36e53cfc2acfec6479988a4278c45c11
   - enabled: 1
     path: Assets/Lunar Landscape 3D/Scenes/Level 3.unity
-    guid: f73fb0786d97a5b4881fc01ec97b7705
+    guid: 8b5fcf1610503e0438615a2c0cd1d7d6
+  - enabled: 1
+    path: Assets/Lunar Landscape 3D/Scenes/LevelScene.unity
+    guid: f33d30d879e91c64d8c8fb02d3b1b3cf
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
