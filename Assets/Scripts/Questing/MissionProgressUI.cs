@@ -30,6 +30,7 @@ public class MissionProgressUI : MonoBehaviour
         {
             missionText.enabled = false; // Hide the text
             RunSpaceship_Txt.SetActive(true);
+
         }
     }
 }

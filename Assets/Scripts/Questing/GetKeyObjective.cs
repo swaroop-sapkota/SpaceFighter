@@ -50,6 +50,8 @@ public class GetKeyObjective : MonoBehaviour
                         if (doorVideoPlayer != null)
                         {
                             doorVideoPlayer.Play();
+                            GameManager.instance.CompleteGame();
+
                         }
                     }
                 }
