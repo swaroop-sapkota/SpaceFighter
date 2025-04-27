@@ -4,6 +4,8 @@ using TMPro;
 public class MissionProgressUI : MonoBehaviour
 {
     public TextMeshProUGUI missionText; // Link the UI Text here
+    public GameObject RunSpaceship_Txt;
+
 
     private void Update()
     {
@@ -27,6 +29,7 @@ public class MissionProgressUI : MonoBehaviour
             EnemyKillTracker.HasKilledEnough())
         {
             missionText.enabled = false; // Hide the text
+            RunSpaceship_Txt.SetActive(true);
         }
     }
 }

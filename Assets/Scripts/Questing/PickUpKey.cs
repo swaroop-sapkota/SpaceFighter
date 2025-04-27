@@ -51,6 +51,7 @@ public class PickUpKey : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             PickMaterial_Txt.SetActive(false);
+
         }
     }
 }

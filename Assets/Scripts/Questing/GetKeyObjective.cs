@@ -56,7 +56,7 @@ public class GetKeyObjective : MonoBehaviour
                 else
                 {
                     UseMaterial_Txt.SetActive(false);
-                    RunSpaceship_Txt.SetActive(true); // Show "Kill more dragons to activate!"
+                     // Show "Kill more dragons to activate!"
                 }
             }
         }
