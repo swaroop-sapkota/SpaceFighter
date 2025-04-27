@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class KillGoal : MonoBehaviour
+public class QuestGiver : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

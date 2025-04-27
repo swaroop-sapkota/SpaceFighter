@@ -4,6 +4,8 @@ using UnityEngine.UI;
 public class Dragon : MonoBehaviour
 {
     private int HP = 100;
+
+    public int ID {  get; set; }
     public Slider healthBar;
 
     public Animator animator;
@@ -11,7 +13,10 @@ public class Dragon : MonoBehaviour
     public GameObject fireBall;
     public Transform fireBallPoint;
 
-
+    private void Start()
+    {
+        ID = 0;
+    }
     private void Update()
     {
         healthBar.value = HP;
@@ -37,8 +42,11 @@ public class Dragon : MonoBehaviour
         {
             //AdudioManager.instance.Play("DragonDeath");
             // play death animation
+            EnemyKillTracker.AddKill();
+
             animator.SetTrigger("die");
             GetComponent<Collider>().enabled = false;
+            Invoke("DestroyObject", 10f);
         }
         else
         {
@@ -55,4 +63,8 @@ public class Dragon : MonoBehaviour
         rb.AddForce(transform.forward * 25f, ForceMode.Impulse);
     }
 
+    void DestroyObject()
+    {
+        Destroy(gameObject);
+    }
 }
