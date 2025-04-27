@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using EZCameraShake;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
@@ -277,7 +278,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             if (other.CompareTag("Dragon")) // Tag your hazardous objects with "Hazard"
             {
                 health -= 7 * deathRate * Time.deltaTime; // Decrease health by 10 or any value you like
-
+				
                 // Optionally, trigger a hurt animation
                 m_Animator.SetTrigger("Hurt");
 
