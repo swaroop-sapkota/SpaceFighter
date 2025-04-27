@@ -26775,7 +26775,6 @@ GameObject:
   - component: {fileID: 1977952788}
   - component: {fileID: 1977952787}
   - component: {fileID: 1977952786}
-  - component: {fileID: 1977952785}
   m_Layer: 0
   m_Name: Finish Point
   m_TagString: Untagged
@@ -26783,18 +26782,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1977952785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1977952784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e5e5de7b35e7d445804e7ce9010858a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1977952786
 BoxCollider:
   m_ObjectHideFlags: 0
