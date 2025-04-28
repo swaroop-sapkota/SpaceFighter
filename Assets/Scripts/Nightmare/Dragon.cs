@@ -40,8 +40,8 @@ public class Dragon : MonoBehaviour
         HP -= damageAmount;
         if (HP <= 0)
         {
-            //AdudioManager.instance.Play("DragonDeath");
-            // play death animation
+            AudioManager.instance.Play("DragonDeath");
+            //play death animation
             EnemyKillTracker.AddKill();
 
             animator.SetTrigger("die");
@@ -50,7 +50,7 @@ public class Dragon : MonoBehaviour
         }
         else
         {
-            //AudioManager.instance.Play("DragonDamage");
+            AudioManager.instance.Play("DragonDamage");
             // play get hit animation
             animator.SetTrigger("damage");
         }
