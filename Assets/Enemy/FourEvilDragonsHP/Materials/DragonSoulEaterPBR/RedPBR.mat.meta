@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a62951206ccc40946bdf4c37abf14396
+timeCreated: 1476233020
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 77121
+  packageName: Dragon the Terror Bringer and Dragon Boar
+  packageVersion: 1.1
+  assetPath: Assets/Enemy/FourEvilDragonsHP/Materials/DragonSoulEaterPBR/RedPBR.mat
+  uploadId: 345602
