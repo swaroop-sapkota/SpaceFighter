@@ -11,6 +11,7 @@ public class GameManagerScript : MonoBehaviour
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        gameOverUi.SetActive(false);
     }
 
     // Update is called once per frame
@@ -30,7 +31,11 @@ public class GameManagerScript : MonoBehaviour
 
     public void gameOver()
     {
+        Time.timeScale = 0f;
+
         gameOverUi.SetActive(true);
+        Debug.Log("Game Over");
+
     }
 
     public void restart()
@@ -41,6 +46,7 @@ public class GameManagerScript : MonoBehaviour
 
     public void mainMenu()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Main Menu");
         Debug.Log("Main Menu");
     }
