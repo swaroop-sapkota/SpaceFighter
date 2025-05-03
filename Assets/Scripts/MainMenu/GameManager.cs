@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] enemies;
     public GameObject[] uiElementsToHide; // assign your UI like health bars, mission text etc
     public GameObject gameCompletePanel; // assign your 'Game Completed' UI
+    public GameObject gameOverPanel;
     public VideoPlayer endVideoPlayer;
 
     private bool gameFinished = false;

@@ -40,6 +40,7 @@ public class GameManagerScript : MonoBehaviour
 
     public void restart()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Debug.Log("Restart");
     }

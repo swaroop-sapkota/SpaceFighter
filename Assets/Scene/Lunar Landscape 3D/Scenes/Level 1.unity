@@ -272,9 +272,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 52999579}
+  - component: {fileID: 52999581}
   - component: {fileID: 52999578}
   - component: {fileID: 52999580}
-  - component: {fileID: 52999581}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -347,6 +347,7 @@ MonoBehaviour:
   - {fileID: 235853878}
   - {fileID: 1053053287}
   gameCompletePanel: {fileID: 1875041089}
+  gameOverPanel: {fileID: 0}
   endVideoPlayer: {fileID: 1468473438}
 --- !u!114 &52999581
 MonoBehaviour:
