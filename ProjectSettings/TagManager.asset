@@ -8,6 +8,13 @@ TagManager:
   - WayPoints
   - Dragon
   - FlyPoints
+  - HalfPoints
+  - OtherHalf
+  - MaterialOne
+  - MaterialTwo
+  - MaterialThree
+  - MaterialFour
+  - MaterialFive
   layers:
   - Default
   - TransparentFX

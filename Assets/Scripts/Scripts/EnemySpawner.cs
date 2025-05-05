@@ -24,8 +24,8 @@ public class EnemySpawner : MonoBehaviour
             float xPos1 = Random.Range(-80, -40);
             float zPos1 = Random.Range(30, 50);
 
-            float xPos2 = Random.Range(-45, 0);
-            float zPos2 = Random.Range(-55, 13);
+            float xPos2 = Random.Range(60, 85);
+            float zPos2 = Random.Range(-15, -50);
 
             float xPos3 = Random.Range(-50, 0);
             float zPos3 = Random.Range(40, 90);

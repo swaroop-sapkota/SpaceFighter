@@ -31,7 +31,7 @@ public class PatrolState : StateMachineBehaviour
         animator.applyRootMotion = false;
 
         // Find all objects with the "WayPoints" tag
-        GameObject go = GameObject.FindWithTag("WayPoints");
+        GameObject go = GameObject.FindWithTag("OtherHalf");
 
 
         // Add the transforms of the wayPoint objects to the wayPoints list

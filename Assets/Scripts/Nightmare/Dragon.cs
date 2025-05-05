@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class Dragon : MonoBehaviour
 {
-    private int HP = 100;
+    public int HP = 100;
 
     public int ID {  get; set; }
     public Slider healthBar;

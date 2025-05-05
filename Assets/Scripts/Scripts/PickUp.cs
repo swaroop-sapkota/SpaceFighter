@@ -9,7 +9,6 @@ public class PickUp : MonoBehaviour {
 
     public bool money;
     public int moneyAmount;
-    Currency moneyScript;
 
     public bool item;
     public GameObject itemIcon;
@@ -21,7 +20,6 @@ public class PickUp : MonoBehaviour {
 	void Start () {
 
         anim = GameObject.FindWithTag("Player").GetComponent<Animator>();
-        moneyScript = GameObject.FindWithTag("GameController").GetComponent<Currency>();
         invScript = GameObject.FindWithTag("GameController").GetComponent<Inventory>();
     }
 	
@@ -53,12 +51,8 @@ public class PickUp : MonoBehaviour {
     {
         anim.SetTrigger("pickup");
         yield return new WaitForSeconds(1);
-        if (money)
-        {
-            moneyScript.gold += moneyAmount;
-            Destroy(gameObject);
-        }
-        else if (item)
+       
+        if (item)
         {
             GameObject i = Instantiate(itemIcon);
             i.transform.SetParent(invScript.invTab.transform);

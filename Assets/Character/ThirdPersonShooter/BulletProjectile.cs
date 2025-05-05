@@ -34,6 +34,7 @@ public class BulletProjectile : MonoBehaviour {
             // Hit target
             transform.parent = other.transform;
             other.GetComponent<Dragon>().TakeDamage(damageAmount);
+
             Instantiate(vfxHitGreen, transform.position, Quaternion.identity);
         } else {
             // Hit something else

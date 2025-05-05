@@ -26,7 +26,6 @@ public class PickUpKey : MonoBehaviour
             {
                 Key.SetActive(false);
                 GetKeyObj_Txt.SetActive(false);
-                RunSpaceship_Txt.SetActive(true);
                 PickMaterial_Txt.SetActive(false);
 
                 // Set the correct material based on what this pickup is
