@@ -9,6 +9,8 @@ public class EnemySpawner : MonoBehaviour
     public GameObject Enemy3;
     public GameObject Enemy4;
     public GameObject Enemy5;
+    public GameObject Enemy6;
+    public GameObject Enemy7;
     public int EnemyCount;
 
     private void Start()
@@ -33,8 +35,14 @@ public class EnemySpawner : MonoBehaviour
             float xPos4 = Random.Range(-90, -30);
             float zPos4 = Random.Range(30, 60);
 
-            float xPos5 = Random.Range(-53, -25);
-            float zPos5 = Random.Range(0, 30);
+            float xPos5 = Random.Range(0, 50);
+            float zPos5 = Random.Range(-70, -110);
+            
+            float xPos6 = Random.Range(-20, 20);
+            float zPos6 = Random.Range(60, 90);
+            
+            float xPos7 = Random.Range(0, -30);
+            float zPos7 = Random.Range(-10, 20);
 
             // Sample valid NavMesh positions
             Vector3 pos1 = GetNavMeshPosition(new Vector3(xPos1, 20f, zPos1));
@@ -42,6 +50,8 @@ public class EnemySpawner : MonoBehaviour
             Vector3 pos3 = GetNavMeshPosition(new Vector3(xPos3, 20f, zPos3));
             Vector3 pos4 = GetNavMeshPosition(new Vector3(xPos4, 20f, zPos4));
             Vector3 pos5 = GetNavMeshPosition(new Vector3(xPos5, 20f, zPos5));
+            Vector3 pos6 = GetNavMeshPosition(new Vector3(xPos6, 20f, zPos6));
+            Vector3 pos7 = GetNavMeshPosition(new Vector3(xPos7, 20f, zPos7));
 
             // Instantiate enemies at these sampled NavMesh positions
             Instantiate(Enemy1, pos1, Quaternion.identity);
@@ -49,6 +59,7 @@ public class EnemySpawner : MonoBehaviour
             Instantiate(Enemy3, pos3, Quaternion.identity);
             Instantiate(Enemy4, pos4, Quaternion.identity);
             Instantiate(Enemy5, pos5, Quaternion.identity);
+            Instantiate(Enemy6, pos6, Quaternion.identity);
 
             yield return new WaitForSeconds(5);
             EnemyCount += 1;

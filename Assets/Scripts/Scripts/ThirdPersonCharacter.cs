@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using EZCameraShake;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
 {

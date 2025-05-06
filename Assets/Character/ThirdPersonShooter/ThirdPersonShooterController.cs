@@ -4,7 +4,6 @@ using UnityEngine;
 using Cinemachine;
 using StarterAssets;
 using UnityEngine.InputSystem;
-using EZCameraShake;
 
 public class ThirdPersonShooterController : MonoBehaviour {
 
@@ -89,7 +88,6 @@ public class ThirdPersonShooterController : MonoBehaviour {
             //
             //
             // Projectile Shoot
-            CameraShaker.Instance.ShakeOnce(4f, 4f, .1f, 1f);
             Vector3 aimDir = (mouseWorldPosition - spawnBulletPosition.position).normalized;
             Instantiate(pfBulletProjectile, spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
             //*/

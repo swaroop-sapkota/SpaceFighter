@@ -33,7 +33,7 @@ public class AlbinoEnemyAI : MonoBehaviour
         player = GameObject.FindWithTag("Player").transform;
 
         // Find all objects with the "WayPoints" tag
-        GameObject go = GameObject.FindWithTag("HalfPoints");
+        GameObject go = GameObject.FindWithTag("MaterialFour");
         // Add the transforms of the wayPoint objects to the wayPoints list
         foreach (Transform t in go.transform)
         {
